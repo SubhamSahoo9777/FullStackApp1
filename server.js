@@ -47,6 +47,13 @@ app.use(morgan('dev')) // when ever api hit ,it shows here
 // })
 app.use("/api/v1/auth", require("./routes/userRoutes"))
 app.use("/api/v1/post", require("./routes/postRouter"))
+//home
+app.get("/",(req,res)=>{
+    res.status(200).send({
+        "success":"true",
+        "message":"node server running"
+    })
+})
 
 //This line sets up a route for handling requests starting with "/api/v1/auth". The actual route handling logic is likely defined in the "./routes/userRoutes" file.
 //5.Port =>we accept the port from .env
