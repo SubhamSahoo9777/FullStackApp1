@@ -48,11 +48,14 @@ app.use(morgan('dev')) // when ever api hit ,it shows here
 app.use("/api/v1/auth", require("./routes/userRoutes"))
 app.use("/api/v1/post", require("./routes/postRouter"))
 //home
+// app.get("/",(req,res)=>{
+//     res.status(200).send({
+//         "success":"true",
+//         "message":"node server running"
+//     })
+// })
 app.get("/",(req,res)=>{
-    res.status(200).send({
-        "success":"true",
-        "message":"node server running"
-    })
+    res.status(200).send("<h1>i love my india</h1>")
 })
 
 //This line sets up a route for handling requests starting with "/api/v1/auth". The actual route handling logic is likely defined in the "./routes/userRoutes" file.
