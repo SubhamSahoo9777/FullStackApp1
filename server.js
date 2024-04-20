@@ -55,7 +55,14 @@ app.use("/api/v1/post", require("./routes/postRouter"))
 //     })
 // })
 app.get("/",(req,res)=>{
-    res.status(200).send("<h1>i love my india</h1>")
+    res.status(200).send("<div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>")
 })
 
 //This line sets up a route for handling requests starting with "/api/v1/auth". The actual route handling logic is likely defined in the "./routes/userRoutes" file.
